@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "swift-build",
+      "type": "process",
+      "command": "C:\\Users\\estanislau.thomas\\scoop\\apps\\swift\\6.0.1\\extract_folder\\LocalApp\\Programs\\Swift\\Toolchains\\6.0.1+Asserts\\usr\\bin\\swiftc.exe",
+      "args": [
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "run-executable",
+      "type": "shell",
+      "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "group": "test",
+      "presentation": {
+        "reveal": "always"
+      }
+    }
+  ]
+}
